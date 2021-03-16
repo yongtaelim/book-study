@@ -18,7 +18,7 @@ fun varargMax(vararg numbers: Int): Int {
     return large
 }
 
-println(varargMax(1,5,2,5,12))
+println(varargMax(1,5,2,5,12, 22))
 
 // 응용편
 fun greetMany(msg: String, vararg names: String) {
