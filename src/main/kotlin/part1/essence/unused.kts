@@ -15,4 +15,4 @@ try {
     println(stackTrace[0])
     println(stackTrace[1])
 }
-// kotlinc -script src/main/kotlin/essence/unused.kts
+// kotlinc -script src/main/kotlin/part1.essence/unused.kts
