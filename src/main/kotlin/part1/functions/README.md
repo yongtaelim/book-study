@@ -1,6 +1,17 @@
 #Chapter3
-1. Kotlin은 기본적으로 메서드에 return이 필수다. void와 비슷한 것이 있으나 Unit을 리턴한다.
+## 기본인자와 명시적 인자
+- 선언방법 reference: defaultarguments
+- 사용방법 reference: defaultcompute
+- 명시적 아규먼트 이용방법 reference : namedarguments
 
+## Triple
+- 선언방법 및 데이터 조회 방법
+- reference : destructuring
+
+## Vararg
+- reference : vararg
+
+## 정리
 - 사용자가 메소드를 만들도록 강요하지 않음.
 - 개발자가 최상위 함수도 만들수 있음
 - 애플리케이션이 반드시 객체로만 이루어질 필요가 없고 함수로 구성이 가능하다. 절차적, 객체지향적, 함수형 코드 중 아무거나 선택이 가능
