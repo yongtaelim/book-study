@@ -37,7 +37,7 @@ result = context.oneOfTheseFourMethods { optionalParamter ->
 - anymethods
 
 ## 암시적 리시버
-- 리시버 전달 : lambda
+- 리시버 전달 : lambda, multiplereceivers
 
 ## 정리
 - 언어의 유창성, 표현력은 언어 자체를 깨뜨릴 수도 있고, 만들 수도 있다.
