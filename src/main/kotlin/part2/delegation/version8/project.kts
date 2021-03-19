@@ -1,29 +1,31 @@
+package org.kotlinlang.play.part2.delegation.version8
+
 // 델리게이션의 주의할 점
-interface Worker {
+interface Worker8 {
     fun work()
     fun takeVacation()
     fun fileTimeSheet() = println("Why???")
 }
 
-class JavaProgrammer : Worker {
+class JavaProgrammer8 : Worker8 {
     override fun work() = println("write Java")
     override fun takeVacation() = println("code at the beach")
 }
 
-class CSharpProgrammer : Worker {
+class CSharpProgrammer8 : Worker8 {
     override fun work() = println("write csharp")
     override fun takeVacation() = println("branch at the beach")
 }
 
-class Manager(var staff: Worker) : Worker by staff
+class Manager(var staff: Worker8) : Worker8 by staff
 
-val manager = Manager(JavaProgrammer())
+val manager = Manager(JavaProgrammer8())
 println("Staff is ${manager.staff.javaClass.simpleName}")
 manager.work()
 
 println("change staff")
 
-manager.staff = CSharpProgrammer()
+manager.staff = CSharpProgrammer8()
 println("Staff is ${manager.staff.javaClass.simpleName}")
 manager.work()
 

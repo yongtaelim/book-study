@@ -1,14 +1,14 @@
-interface Worker {
+interface Worker1 {
     fun work()
     fun takeVacation()
 }
 
-class JavaProgrammer : Worker {
+class JavaProgrammer : Worker1 {
     override fun work() = println("write Java...")
     override fun takeVacation() = println("code at the beach...")
 }
 
-class CSharpProgrammer : Worker {
+class CSharpProgrammer : Worker1 {
     override fun work() = println("write c#...")
     override fun takeVacation() = println("branch at the beach...")
 }

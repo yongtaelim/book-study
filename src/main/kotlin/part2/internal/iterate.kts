@@ -1,3 +1,5 @@
+package org.kotlinlang.play.part2.internal
+
 // 외부 반복자
 val numbers = listOf(10, 12, 15, 17, 18, 19)
 for (number in numbers) {

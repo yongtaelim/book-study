@@ -1,4 +1,4 @@
-interface Worker {
+interface Worker5 {
     fun work()
     fun takeVacation()
     fun fileTimeSheet() = println("Why...?")

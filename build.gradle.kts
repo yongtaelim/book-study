@@ -16,7 +16,7 @@ dependencies {
     testImplementation(kotlin("test-junit"))
     implementation(kotlin("script-runtime"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2")
-
+    implementation("com.beust:klaxon:5.5")
 }
 
 tasks.test {

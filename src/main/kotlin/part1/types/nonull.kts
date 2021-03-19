@@ -32,7 +32,7 @@ fun computeSqrt(n: Double): Double {
 //}
 
 // 아래처럼 하면 Error가 발생하지 않는다.. 하지만.. 마음에 안듦
-fun nickName(name: String?): String? {
+fun nickName1(name: String?): String? {
     if (name == "Tom") {
         return "Coffee"
     }
@@ -44,7 +44,7 @@ fun nickName(name: String?): String? {
 }
 
 // 개선 1. safe-call 연산자
-fun nickName(name: String?): String? {
+fun nickName2(name: String?): String? {
     if (name == "Tom") {
         return "Coffee"
     }
@@ -53,7 +53,7 @@ fun nickName(name: String?): String? {
 }
 
 // 개선 2. 엘비스 연산자
-fun nickName(name: String?): String? {
+fun nickName3(name: String?): String? {
     if (name == "Tom") {
         return "Coffee"
     }
@@ -67,7 +67,7 @@ fun nickName(name: String?): String? {
 // !! 이런 연산자가 있다. NPE 나길 바라는 마음이라면 사용하자. 쓰지말자 삭제..
 
 // 개선 3. when
-fun nickName(name: String?) = when (name) {
+fun nickName4(name: String?) = when (name) {
     "Tom" -> "Coffee"
     null -> "Joker"
     else -> name.reversed().toUpperCase()

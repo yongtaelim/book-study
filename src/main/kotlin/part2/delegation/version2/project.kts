@@ -1,23 +1,25 @@
-interface Worker {
+package org.kotlinlang.play.part2.delegation.version2
+
+interface Worker2 {
     fun work()
     fun takeVacation()
 }
 
-class JavaProgrammer : Worker {
+class JavaProgrammer2 : Worker2 {
     override fun work() = println("write Java...")
     override fun takeVacation() = println("code at the beach...")
 }
 
-class CSharpProgrammer : Worker {
+class CSharpProgrammer2 : Worker2 {
     override fun work() = println("write c#...")
     override fun takeVacation() = println("branch at the beach...")
 }
 
-class Manager
+//class Manager2
 
-class Manager(val worker: Worker) {
-    fun work() = worker.work()
-    fun takeVacation() = worker.takeVacation()
+class Manager2(val worker2: Worker2) {
+    fun work() = worker2.work()
+    fun takeVacation() = worker2.takeVacation()
 }
 
 // 이렇게 사용하면 좋치 않다.

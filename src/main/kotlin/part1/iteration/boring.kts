@@ -34,7 +34,7 @@ println(whatToDo(8))  // No clue
 // when에서 -> 뒤에 블록이 올 수 있다. 하지만 되도록이면 쓰지 말자!! 너무 복잡해진다. 메서드로 빼도록 하자
 
 // not bad.. not good..
-fun systemInfo(): String {
+fun systemInfo1(): String {
     val numberOfCores = Runtime.getRuntime().availableProcessors()
     return when (numberOfCores) {
         1 -> "1 core, packing....."
@@ -44,7 +44,7 @@ fun systemInfo(): String {
 }
 
 // good!!
-fun systemInfo(): String {
+fun systemInfo2(): String {
     return when (val numberOfCores = Runtime.getRuntime().availableProcessors()) {
         1 -> "1 core, packing....."
         in 2.. 16 -> "You have $numberOfCores cores"
