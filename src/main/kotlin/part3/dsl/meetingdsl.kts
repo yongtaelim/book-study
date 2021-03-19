@@ -50,6 +50,46 @@ Meetingdsl$Meeting@6b25ef1c
 at, by 메소드를 만들고 람다 안에서 둘 다 실행시켜 보는 것!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 
+//class Meeting(val title: String) {
+//    var startTime: String = ""
+//    var endTime: String = ""
+//
+//    private fun convertToString(time: Double) = String.format("%.02f", time)
+//    fun at(time: Double) { startTime = convertToString(time) }
+//    fun by(time: Double) { endTime = convertToString(time) }
+//    override fun toString() = "$title Meeting starts $startTime ends $endTime"
+//}
+//
+//infix fun String.meeting(block: Meeting.() -> Unit) {
+//    val meeting = Meeting(this)
+//    meeting.block()
+//    println(meeting)
+//}
+//
+//"Release Planning" meeting {
+//    at(15.20)
+//    by(16.30)
+//}
+
 class Meeting(val title: String) {
-    var startTime: String
+    var startTime: String = ""
+    var endTime: String = ""
+    var start = this
+    var end = this
+
+    private fun convertToString(time: Double) = String.format("%.02f", time)
+    infix fun at(time: Double) { startTime = convertToString(time) }
+    infix fun by(time: Double) { endTime = convertToString(time) }
+    override fun toString() = "$title Meeting starts $startTime ends $endTime"
+}
+
+infix fun String.meeting(block: Meeting.() -> Unit) {
+    val meeting = Meeting(this)
+    meeting.block()
+    println(meeting)
+}
+
+"Release Planning" meeting {
+    start at 15.20
+    end by 16.30
 }
