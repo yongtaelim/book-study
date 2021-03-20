@@ -1,4 +1,3 @@
-
 // 배열 만드는 방법
 val alphabet = arrayOf("a", "b", "c", "d")
 println("${alphabet[0]} and ${alphabet[1]}")
@@ -12,4 +11,4 @@ val smartNumbers = intArrayOf(1, 2, 3, 4, 5)
 println(smartNumbers.size)
 println(smartNumbers.average())
 
-println(Array(5) { i -> (i + 1) * (i + 1)}.sum())
+println(Array(5) { i -> (i + 1) * (i + 1) }.sum())

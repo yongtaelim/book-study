@@ -1,23 +1,32 @@
 # Chapter 02 정리
+
 ## RAW 문자열
+
 - 이스케이프 Bye Bye... (\" |")
 - RAW 문자열 Hello """ """
 - reference : memo
 
 ## 명령문 < 표현식
+
 - if else, try catch 예제 참조
 - reference : statement
 
 ## kotlin 특성
+
 ### 변수는 정적
+
 - reference : typechecking
+
 ### No Class
+
 - reference : unused
 
 ## warning도 error로 설정하는 방법
+
 - reference : warning
 
 ## 정리
+
 - 관용적인 코드 대부분을 삭제
 - 같은 작업을 한다면 다른 언어들보다 훨씬 적응 타이핑으로 가능
 - 세미콜론은 Optional, 변수 선언할 때는 타입 추론 사용

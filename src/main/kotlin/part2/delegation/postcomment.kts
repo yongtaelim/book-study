@@ -2,7 +2,9 @@ import kotlin.reflect.KProperty
 
 // List<Map>에서 특정 Key값에 해당하는 value값을 내가 원하는 형태로 convert한다.
 class PoliteString(private val dataSource: MutableMap<String, Any>) {
-    operator fun getValue(thisRef: Any?, property: KProperty<*>) = (dataSource[property.name] as? String)?.replace("stupid", "s*****") ?: ""
+    operator fun getValue(thisRef: Any?, property: KProperty<*>) =
+        (dataSource[property.name] as? String)?.replace("stupid", "s*****") ?: ""
+
     operator fun setValue(thisRef: Any, property: KProperty<*>, value: String) {
         dataSource[property.name] = value
     }

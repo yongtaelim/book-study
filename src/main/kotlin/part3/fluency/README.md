@@ -1,4 +1,5 @@
 # Chapter 12
+
 ```
 죄송합니다. 편지를 짧게 쓸 여유가 없어서 길게 씁니다.
 ```
@@ -8,38 +9,48 @@
   
 잘 쓰여진 코드는 간결하고 읽기 쉽고 이해하기 쉽고 그 자체로 우리와 팀에게 선물이 된다. 또 읽는데 즐겁고 우리를 생산적이게 만들고 더 좋은 퀄리티의 소프트웨어를 개발하게하는 모티브가 된다.
 ```
+
 정말 멋진 말이다.
 
 이번 Chapter부터 시작인 느낌이다.  
-어떻게 코틀린 코드를 잘 쓰고, 표현력 있게 쓰고, 간결하게 쓰는지 배우는 장이다.  
+어떻게 코틀린 코드를 잘 쓰고, 표현력 있게 쓰고, 간결하게 쓰는지 배우는 장이다.
 
 ## 연산자 오버로딩
+
 - 너무 과하게 사용하지 말자 -> today + 2... 오늘부터 2일.? 2달? 2년? 개발자에게 Q?을 던지지 말자
-- counter, pairplus, complex 
+- counter, pairplus, complex
 
 ## 확장 함수와 속성을 이용한 인젝팅
+
 - circle, stringext, forstringrange, innerextension
 
 ## 함수 확장
+
 - extendfunctions
 
 ## infix를 이용한 중위표기법
+
 - infixs
 
 ## Any 객체를 이용한 자연스러운 코드
+
 - 4가지 메소드.. also(), apply(), let(), run()
+
 ```
 result = context.oneOfTheseFourMethods { optionalParamter ->
   ...body...
   ...what's this (receiver) here?...
   optionalResult
 ```
+
 - anymethods
 
 ## 암시적 리시버
+
 - 리시버 전달 : lambda, multiplereceivers
 
 ## 정리
+
 - 언어의 유창성, 표현력은 언어 자체를 깨뜨릴 수도 있고, 만들 수도 있다.
 - 연산자 오버로딩을 조심스럽게 사용하면 직접 만든 클래스에 적절한 부분에서 편리하게 연산자를 사용할 수 있다.
 - 함수 확장, 프로퍼티 확장, 연산자 확장을 사용하면 우리는 서드파티 클래스에 우리만의 편리한 멤버를 추가해서 코드에 직관성을 추가 가능!

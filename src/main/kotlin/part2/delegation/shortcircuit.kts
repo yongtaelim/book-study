@@ -1,4 +1,3 @@
-
 // 온도를 얻을 수 있는 외부 함수가 있다고 가정!!
 fun getTemperature(city: String): Double {
     println("fetch from webservice for $city")

@@ -17,7 +17,7 @@ Groovy 방식의 메모이제이션
 fun <T, R> ((T) -> R).memoize(): ((T) -> R) {
     val origianl = this
     val cache = mutableMapOf<T, R>()
-    return { n: T -> cache.getOrPut(n) { origianl(n)} }
+    return { n: T -> cache.getOrPut(n) { origianl(n) } }
 }
 
 // lateinit : 코틀린은 정적 변수를 사용한다. 하지만 lateinit을 선언하여 난 잊지 않았어 ~ 이따가 선언할꺼야라고 코틀린에게 알려준다.

@@ -7,7 +7,7 @@ fun max(numbers: IntArray): Int {
     return large
 }
 
-println(max(intArrayOf(1,5,2,5,12)))
+println(max(intArrayOf(1, 5, 2, 5, 12)))
 
 // 적용 O
 fun varargMax(vararg numbers: Int): Int {
@@ -18,7 +18,7 @@ fun varargMax(vararg numbers: Int): Int {
     return large
 }
 
-println(varargMax(1,5,2,5,12))
+println(varargMax(1, 5, 2, 5, 12))
 
 // 응용편
 fun greetMany(msg: String, vararg names: String) {
@@ -28,5 +28,5 @@ fun greetMany(msg: String, vararg names: String) {
 greetMany(msg = "Hello", "James", "John", "Tom")
 
 // 스프레드 연산자
-val values = intArrayOf(1,52,11)
+val values = intArrayOf(1, 52, 11)
 println(varargMax(*values))

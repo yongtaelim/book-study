@@ -1,8 +1,14 @@
 // bad!!
 fun isAlive(alive: Boolean, numberOfLiveNeighbors: Int): Boolean {
-    if (numberOfLiveNeighbors < 2) { return false }
-    if (numberOfLiveNeighbors > 3) { return false }
-    if (numberOfLiveNeighbors == 3) { return true }
+    if (numberOfLiveNeighbors < 2) {
+        return false
+    }
+    if (numberOfLiveNeighbors > 3) {
+        return false
+    }
+    if (numberOfLiveNeighbors == 3) {
+        return true
+    }
     return alive && numberOfLiveNeighbors == 2
 }
 
@@ -38,7 +44,7 @@ fun systemInfo1(): String {
     val numberOfCores = Runtime.getRuntime().availableProcessors()
     return when (numberOfCores) {
         1 -> "1 core, packing....."
-        in 2.. 16 -> "You have $numberOfCores cores"
+        in 2..16 -> "You have $numberOfCores cores"
         else -> "$numberOfCores cores!, I wan..."
     }
 }
@@ -47,7 +53,7 @@ fun systemInfo1(): String {
 fun systemInfo2(): String {
     return when (val numberOfCores = Runtime.getRuntime().availableProcessors()) {
         1 -> "1 core, packing....."
-        in 2.. 16 -> "You have $numberOfCores cores"
+        in 2..16 -> "You have $numberOfCores cores"
         else -> "$numberOfCores cores!, I wan..."
     }
 }

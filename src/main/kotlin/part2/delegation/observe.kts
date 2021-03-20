@@ -1,7 +1,7 @@
 import kotlin.properties.Delegates.observable
 
 // 모니터링할 때 유용할 듯?
-var count by observable(0) { property, oldValue, newValue -> println("Property: $property OldValue: $oldValue NewValue: $newValue")}
+var count by observable(0) { property, oldValue, newValue -> println("Property: $property OldValue: $oldValue NewValue: $newValue") }
 
 println("The value of count is: $count")
 count++

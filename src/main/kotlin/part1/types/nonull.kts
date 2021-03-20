@@ -61,7 +61,7 @@ fun nickName3(name: String?): String? {
 //    val result = name?.reversed()?.toUpperCase()
 //    return if (result == null) "Joker" else result
 
-    return name?.reversed()?.toUpperCase()?: "Joker"
+    return name?.reversed()?.toUpperCase() ?: "Joker"
 }
 
 // !! 이런 연산자가 있다. NPE 나길 바라는 마음이라면 사용하자. 쓰지말자 삭제..

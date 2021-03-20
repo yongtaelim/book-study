@@ -29,7 +29,7 @@ open class Car(year: Int, color: String) : Vehicle(year, color) {
 // 부모 클래스에서 private or protected 멤버를 자식 클래스에서는 public으로 만들 수 있다.
 class FamilyCar(year: Int, color: String) : Car(year, color) {
     override var color: String
-    get() = super.color
+        get() = super.color
         set(value) {
             if (value.isEmpty()) {
                 throw RuntimeException("Color required")

@@ -1,4 +1,3 @@
-
 /*
 인라인 최적화는 없는게 기본이다.
  */
@@ -24,7 +23,7 @@ fun report(n: Int) {
 }
 
 fun callInvokeTwo() {
-    invokeTwo(1, { i -> report(i)}, { i -> report(i)})
+    invokeTwo(1, { i -> report(i) }, { i -> report(i) })
 }
 
 callInvokeTwo()
@@ -92,7 +91,7 @@ inline fun invokeTwo1(
    - 두 번째 파라미터를 noinline으로 마크한다. 노인라인을 하면 성능상의 이득이 없고 논로컬 리턴을 사용할 권한도 없다.
    - 두 번째 파라미터를 crossinline으로 만든다. action2 함수는 invokeTwo() gkatnrk dkslrh ghcnfehlsms qnqnsdptj dlsfkdlsdl ehlsek.
  */
-inline fun invokeTwo3 (
+inline fun invokeTwo3(
     n: Int,
     action1: (Int) -> Unit,
     crossinline action2: (Int) -> Unit
@@ -100,7 +99,7 @@ inline fun invokeTwo3 (
     println("enter invokeTwo $n")
     action1(n)
     println("exit invokeTwo $n")
-    return { input: Int -> action2(input)}
+    return { input: Int -> action2(input) }
 }
 /*
 inline은 함수를 인라인으로 만들어서 함수 호출의 오버헤드를 제거해서 함수 성능을 최적화 시킴.

@@ -78,8 +78,14 @@ class Meeting(val title: String) {
     var end = this
 
     private fun convertToString(time: Double) = String.format("%.02f", time)
-    infix fun at(time: Double) { startTime = convertToString(time) }
-    infix fun by(time: Double) { endTime = convertToString(time) }
+    infix fun at(time: Double) {
+        startTime = convertToString(time)
+    }
+
+    infix fun by(time: Double) {
+        endTime = convertToString(time)
+    }
+
     override fun toString() = "$title Meeting starts $startTime ends $endTime"
 }
 

@@ -1,4 +1,5 @@
 package org.kotlinlang.play.part2.internal
+
 /*
 코틀린에서 내부 반복자는 콜렉션 사이즈가 작을 때 사용하자!
 사이즈가 큰 콜렉션에는 시퀀스를 이용해서 내부 반봅자를 사용해야한다.

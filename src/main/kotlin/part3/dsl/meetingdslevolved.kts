@@ -5,11 +5,15 @@ open class MeetingTime(var time: String = "") {
 }
 
 class StartTime : MeetingTime() {
-    infix fun at(theTime: Double) { time = convertToString(theTime) }
+    infix fun at(theTime: Double) {
+        time = convertToString(theTime)
+    }
 }
 
 class EndTime : MeetingTime() {
-    infix fun by(theTime: Double) { time = convertToString(theTime) }
+    infix fun by(theTime: Double) {
+        time = convertToString(theTime)
+    }
 }
 
 class Meeting(val title: String) {

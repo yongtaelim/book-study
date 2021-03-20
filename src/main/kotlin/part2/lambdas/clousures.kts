@@ -1,4 +1,3 @@
-
 val doubleIt = { e: Int -> e * 2 }
 
 /*

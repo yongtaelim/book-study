@@ -23,12 +23,12 @@ car2.color = "Green"
 class Car3(val yearOfMake: Int, theColor: String) {
     var fuelLevel = 100
     var color = theColor
-    set(value) {
-        if (value.isBlank()) {
-            throw RuntimeException("no empty, please")
+        set(value) {
+            if (value.isBlank()) {
+                throw RuntimeException("no empty, please")
+            }
+            field = value
         }
-        field = value
-    }
 }
 
 //public final void setColor(@NotNull String value) {

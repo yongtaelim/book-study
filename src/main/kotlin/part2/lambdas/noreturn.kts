@@ -31,7 +31,7 @@ for문에서 continue와 동일하다.
 
 fun caller() {
     (1..3).forEach { i ->
-        invokeWith(i) here@ {
+        invokeWith(i) here@{
             println("enter for $it")
 
             if (it == 2) {
@@ -87,7 +87,9 @@ after return from caller
 fun caller2() {
     (1..3).forEach { i ->
         println("in forEach for $i")
-        if (i == 2) { return }
+        if (i == 2) {
+            return
+        }
         invokeWith(i) {
             println("enter for $it")
 

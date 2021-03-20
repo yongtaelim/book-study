@@ -8,4 +8,4 @@ fun printValues(values: Array<*>) {
     }
 }
 
-printValues(arrayOf(1,2))
+printValues(arrayOf(1, 2))

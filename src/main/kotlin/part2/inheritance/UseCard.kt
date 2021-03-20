@@ -11,6 +11,7 @@ fun process(card: Card) = when (card) {
     is King, is Queen, is Jack -> "$card"
     is Pip -> "${card.number} of ${card.suit}"
 }
+
 fun main() {
 //    println(process(Ace("Diamond")))
 //    println(process(Queen("Clubs")))

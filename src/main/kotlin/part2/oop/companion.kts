@@ -4,9 +4,10 @@
  * 이 때 메소드를 컴패니언 객체로 만든다.
  * 컴패니언 객체는 클래스 안에 정의한 싱글톤이다.
  */
-class MachineOperator( val name: String) {
+class MachineOperator(val name: String) {
     fun checkin() = checkedIn++
     fun checkout() = checkedIn--
+
     companion object {
         var checkedIn = 0
         fun minimumBreak() = "15 minutes every 2 hours"
@@ -26,14 +27,16 @@ println(MachineOperator.checkedIn)
 val ref = MachineOperator.Companion
 
 // 컴패니언 명 지정
-class MachineOperator1( val name: String) {
+class MachineOperator1(val name: String) {
     fun checkin() = checkedIn++
     fun checkout() = checkedIn--
+
     companion object MachineOperatorFactory {
         var checkedIn = 0
         fun minimumBreak() = "15 minutes every 2 hours"
     }
 }
+
 val ref = MachineOperator1.MachineOperatorFactory
 
 // 팩토리로 사용하는 컴패니언

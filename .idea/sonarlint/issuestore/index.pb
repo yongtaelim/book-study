@@ -3,8 +3,6 @@ C
 settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850
 X
 (src/main/kotlin/part1/essence/unused.kts,1/8/18508fd2a7654976153f7e636c32fa8a6a227633
-X
-(src/main/kotlin/part1/essence/equals.kts,3/2/32fb533ac9154933b5f0ea5538b09181c7cefe2f
 Y
 )src/main/kotlin/part1/essence/warning.kts,d/a/da282c32ad116aef2e7a446e79d3cd6d24b4675e
 [
@@ -29,8 +27,6 @@ a
 +src/main/kotlin/part1/iteration/reverse.kts,6/c/6ccc304783e7f3c72f0f8fd4357d99594b85a652
 Z
 *src/main/kotlin/part1/iteration/ranges.kts,2/3/233f77ff01eff8eb15e630d4a6aae1edb4196508
-[
-+src/main/kotlin/part1/iteration/iterate.kts,c/c/ccc7dde12ff417ba35e0886391b97d46ddeb0524
 ^
 .src/main/kotlin/part1/iteration/skipvalues.kts,4/e/4e54c21b20ed9a04a97531c507bdd351d9216c51
 Z
@@ -125,8 +121,6 @@ d
 4src/main/kotlin/part2/inheritance/UseCardWithEnum.kt,d/b/db8525fe7f51caf528866636736769142250225f
 [
 +src/main/kotlin/part2/inheritance/README.md,f/5/f5e2339464ed99e75297eee0f03f87e82e003b1f
-e
-5src/main/kotlin/part2/delegation/version1/project.kts,b/3/b34c679dbf05be27fde9a111c245363f4a17ef09
 e
 5src/main/kotlin/part2/delegation/version2/project.kts,4/c/4c68aac172df4c13765006ba364fc8e53501a116
 e

@@ -5,7 +5,7 @@ import kotlin.properties.Delegates.vetoable
  * return 값이 true일 경우에만 값을 변경한다.
  */
 
-var count by vetoable(0) { _, oldValue, newValue -> newValue > oldValue}
+var count by vetoable(0) { _, oldValue, newValue -> newValue > oldValue }
 
 println("The value of count is: $count")
 count++

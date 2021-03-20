@@ -6,8 +6,8 @@ fun unitsSupported() = listOf("Metric", "Imperal")
 fun precision(): Int = throw RuntimeException("Not implemented yet")
 
 object Templerature {
-    fun c2f(c: Double) = c * 9.0/5 + 32
-    fun f2c(f: Double) = (f - 32) * 5.0/9
+    fun c2f(c: Double) = c * 9.0 / 5 + 32
+    fun f2c(f: Double) = (f - 32) * 5.0 / 9
 }
 
 object Distance {

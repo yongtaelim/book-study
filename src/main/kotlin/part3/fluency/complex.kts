@@ -3,8 +3,11 @@ import kotlin.math.abs
 data class Complex(val real: Int, val imaginary: Int) {
     // operator fun times은 *와 동일
     operator fun times(other: Complex) =
-        Complex(real * other.real - imaginary * other.imaginary,
-            real * other.imaginary + imaginary * other.real)
+        Complex(
+            real * other.real - imaginary * other.imaginary,
+            real * other.imaginary + imaginary * other.real
+        )
+
     private fun sign() = if (imaginary < 0) "-" else "+"
     override fun toString() = "$real ${sign()} ${abs(imaginary)}i"
 }

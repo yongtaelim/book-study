@@ -10,17 +10,23 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    testImplementation(kotlin("test-junit"))
-    implementation(kotlin("script-runtime"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2")
+    implementation(kotlin("stdlib"))
+    implementation(kotlin("reflect:1.3.41"))
     implementation("com.beust:klaxon:5.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2")
+
+    testImplementation(kotlin("io.kotlintest:kotlintest-runner-junit5:3.3.0"))
+    implementation(kotlin("script-runtime"))
+
+
 }
 
 tasks.test {
-    useJUnit()
+    useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile>() {

@@ -6,7 +6,10 @@ suspend fun compute(checkActive: Boolean) = coroutineScope {
     var count = 0L
     val max = 10000000000
 
-    while ( if (checkActive) { isActive } else (count < max) ) {
+    while (if (checkActive) {
+            isActive
+        } else (count < max)
+    ) {
         count++
     }
     if (count == max) {

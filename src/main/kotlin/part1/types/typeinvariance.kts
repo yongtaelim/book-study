@@ -40,5 +40,5 @@ fun receiveFruit(fruit: Array<in Fruit>) {
     println("Number of fruits: ${fruit.size}")
 }
 
-val anythings = Array<Any>(3) { _ -> Fruit()}
+val anythings = Array<Any>(3) { _ -> Fruit() }
 receiveFruit(anythings)

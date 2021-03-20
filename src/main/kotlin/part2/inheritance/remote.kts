@@ -6,8 +6,9 @@ interface Remote {
         up()
         up()
     }
+
     companion object {
-        fun combine(first: Remote, second: Remote): Remote = object: Remote {
+        fun combine(first: Remote, second: Remote): Remote = object : Remote {
             override fun up() {
                 first.up()
                 second.up()
@@ -27,7 +28,7 @@ class TV {
 }
 
 // interface 구현 방법
-class TVRemote(val tv: TV): Remote {
+class TVRemote(val tv: TV) : Remote {
     override fun up() {
         tv.volume++
     }

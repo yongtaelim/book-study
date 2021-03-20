@@ -1,4 +1,4 @@
-object Sun: Runnable {
+object Sun : Runnable {
     val radiusInKM = 615453
     var coreTemperatureInC = 1908527
     override fun run() {

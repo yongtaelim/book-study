@@ -3,7 +3,7 @@ package org.kotlinlang.play.part3.async
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 
-fun main()  = runBlocking {
+fun main() = runBlocking {
     val format = "%-10s%-20s%-10s"
     println(String.format(format, "Code", "Temperature", "Delay"))
     val time = measureTimeMillis {
