@@ -207,3 +207,5 @@ S
 #src/main/kotlin/part3/dsl/README.md,e/6/e64bd9f31e7b54885f88930c8fe34cfb1cef5d9a
 X
 (src/main/kotlin/part3/dsl/meetingdsl.kts,d/4/d4d086fef144c1c5d0a328153b23647238fee187
+\
+,src/main/kotlin/part1/essence/equalsTest.kts,6/9/69c255f1349ad0c4ff28dc4d5e597dd923276476
