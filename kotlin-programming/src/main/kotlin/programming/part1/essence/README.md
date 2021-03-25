@@ -19,7 +19,7 @@
 
 ### No Class
 
-- reference : unused
+- reference: unused
 
 ## warning도 error로 설정하는 방법
 
