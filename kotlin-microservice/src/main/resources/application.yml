@@ -1,0 +1,6 @@
+service:
+  message:
+    text: hi
+
+  example:
+    type: one
