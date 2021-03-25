@@ -15,7 +15,7 @@
 
 ### 변수는 정적
 
-- reference : typechecking
+- reference: typechecking
 
 ### No Class
 
