@@ -20,7 +20,7 @@ internal class StoreServiceTest {
     @DisplayName("id를 이용하여 Store 객체를 조회")
     fun getStoreTest() {
         val store = storeService.getStore(1)
-        assertNotNull(store)
+        assertNotNull(store )
         store.shouldNotBeNull()
         store.`should not be null`()
         store.id `should be` 1  // infix 함수 이용
