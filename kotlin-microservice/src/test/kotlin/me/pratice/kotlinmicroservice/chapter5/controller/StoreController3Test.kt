@@ -45,36 +45,37 @@ internal class StoreController3Test {
     @Test
     @DisplayName("store 리스트를 조회")
     fun `we should GET a list of stores`() {
-        When calling storeService.getAllStores() `it returns`
-                listOf(
-                    Store(id = 1, name = "스토어1", address = "주소1"),
-                    Store(id = 2, name = "스토어2", address = "주소2"),
-                    Store(id = 3, name = "스토어3", address = "주소3"),
-                )
-
-        given(storeService.getAllStores())
-            .willReturn(listOf(
-                Store(id = 1, name = "스토어1", address = "주소1"),
-                Store(id = 2, name = "스토어2", address = "주소2"),
-                Store(id = 3, name = "스토어3", address = "주소3"),
-            ))
-
-        mockMvc.perform(get("/stores"))
-            .andExpect(status().isOk)
-            .andExpect(jsonPath("\$[0].id").value(1))
-            .andExpect(jsonPath("\$[0].name").value("스토어1"))
-            .andExpect(jsonPath("\$[0].address").value("주소1"))
-            .andExpect(jsonPath("\$[1].id").value(2))
-            .andExpect(jsonPath("\$[1].name").value("스토어2"))
-            .andExpect(jsonPath("\$[1].address").value("주소2"))
-            .andExpect(jsonPath("\$[2].id").value(3))
-            .andExpect(jsonPath("\$[2].name").value("스토어3"))
-            .andExpect(jsonPath("\$[2].address").value("주소3"))
-            .andDo(print())
-
-        then(storeService).should(times(1)).getAllStores()      // 1번 call?
-        then(storeService).shouldHaveNoMoreInteractions()  // 그 후에 서비스와 더 이상 어떤 상호작용도 없었니?
-
-        reset(storeService)
+//        When calling storeService.getAllStores() `it returns`
+//                listOf(
+//                    Store(id = 1, name = "스토어1", address = "주소1"),
+//                    Store(id = 2, name = "스토어2", address = "주소2"),
+//                    Store(id = 3, name = "스토어3", address = "주소3"),
+//                )
+//
+//        Verify on storeService
+//        given(storeService.getAllStores())
+//            .willReturn(listOf(
+//                Store(id = 1, name = "스토어1", address = "주소1"),
+//                Store(id = 2, name = "스토어2", address = "주소2"),
+//                Store(id = 3, name = "스토어3", address = "주소3"),
+//            ))
+//
+//        mockMvc.perform(get("/stores"))
+//            .andExpect(status().isOk)
+//            .andExpect(jsonPath("\$[0].id").value(1))
+//            .andExpect(jsonPath("\$[0].name").value("스토어1"))
+//            .andExpect(jsonPath("\$[0].address").value("주소1"))
+//            .andExpect(jsonPath("\$[1].id").value(2))
+//            .andExpect(jsonPath("\$[1].name").value("스토어2"))
+//            .andExpect(jsonPath("\$[1].address").value("주소2"))
+//            .andExpect(jsonPath("\$[2].id").value(3))
+//            .andExpect(jsonPath("\$[2].name").value("스토어3"))
+//            .andExpect(jsonPath("\$[2].address").value("주소3"))
+//            .andDo(print())
+//
+//        then(storeService).should(times(1)).getAllStores()      // 1번 call?
+//        then(storeService).shouldHaveNoMoreInteractions()  // 그 후에 서비스와 더 이상 어떤 상호작용도 없었니?
+//
+//        reset(storeService)
     }
 }

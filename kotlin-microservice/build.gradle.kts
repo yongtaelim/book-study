@@ -44,6 +44,7 @@ dependencies {
     testImplementation("org.springframework.kafka:spring-kafka-test")
     // kluent
     testImplementation("org.amshove.kluent:kluent:1.65")
+    implementation(kotlin("script-runtime"))
 
 
 }
