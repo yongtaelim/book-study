@@ -13,7 +13,7 @@ val runnable = createRunnable1()
 runnable.run()
 
 // 싱글 추상 메서드 인터페이스라면 아래와 같이 사용할 수도 있다.
-fun createRunnable(): Runnable = Runnable { println("runnalbe run..") }
+fun createRunnable(): Runnable = Runnable { println("runnable run..") }
 createRunnable().run()
 
 fun createRunnable2(): Runnable = object : Runnable, AutoCloseable {
