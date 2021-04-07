@@ -14,4 +14,10 @@ class PriorityPair<T : Comparable<T>>(member1: T, member2: T) {
         }
     }
 
+    override fun toString(): String {
+        return "$first $second"
+    }
 }
+
+println(Proritypair(2, 1))  // 2, 1
+println(Proritypair("A", "B"))

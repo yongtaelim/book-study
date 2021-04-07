@@ -17,5 +17,8 @@ class Person(val first: String, val last: String) {
     override fun toString(): String {
         return "person(first='$first', last='$last', fulltime=$fulltime, location='$location')"
     }
-
 }
+
+println(Person("Jame", "Doe"))
+println(Person("Jame", "Doe", false))
+println(Person("Jame", "Doe", "home"))

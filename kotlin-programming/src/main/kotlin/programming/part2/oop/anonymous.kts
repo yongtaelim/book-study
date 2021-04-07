@@ -24,5 +24,4 @@ fun createRunnable2(): Runnable = object : Runnable, AutoCloseable {
     override fun close() {
         println("close..")
     }
-
 }
