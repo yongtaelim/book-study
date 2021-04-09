@@ -20,4 +20,4 @@ class PriorityPair<T : Comparable<T>>(member1: T, member2: T) {
 }
 
 println(Proritypair(2, 1))  // 2, 1
-println(Proritypair("A", "B"))
+println(Proritypair("A", "B"))  // B, A
