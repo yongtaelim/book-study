@@ -20,6 +20,15 @@ fun isAliveGood(alive: Boolean, numberOfLiveNeighbors: Int) = when {
     else -> alive && numberOfLiveNeighbors == 2
 }
 
+fun test() {
+    var list = listOf(1,2,3)
+
+    print(when (list.size) {
+        3, 4, 5 -> true
+        else -> false
+    })
+}
+
 fun whatToDo(dayOfWeek: Any) = when (dayOfWeek) {
     "Saturday", "Sunday" -> "Relax"
     in listOf("Monday", "Tuesday", "Wednesday", "Thursday") -> "Work hard"
