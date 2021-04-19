@@ -3,7 +3,7 @@ interface Worker1 {
     fun takeVacation()
 }
 
-class JavaProgrammer : Worker1 {
+open class JavaProgrammer : Worker1 {
     override fun work() = println("write Java...")
     override fun takeVacation() = println("code at the beach...")
 }
@@ -13,7 +13,15 @@ class CSharpProgrammer : Worker1 {
     override fun takeVacation() = println("branch at the beach...")
 }
 
-class Manager
+class Manager : JavaProgrammer() {
+    override fun work() {
+        super.work()
+    }
+
+    override fun takeVacation() {
+        super.takeVacation()
+    }
+}
 
 /**
  * 가정

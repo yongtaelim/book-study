@@ -13,8 +13,9 @@ fun process(card: Card) = when (card) {
 }
 
 fun main() {
-//    println(process(Ace("Diamond")))
-//    println(process(Queen("Clubs")))
-//    println(process(Pip("Spades", 2)))
-//    println(process(Pip("Hearts", 6)))
+    println(process(Ace("Diamond")))                // Ace of Diamond
+    println(process(Queen("Clubs")))                // Queen of Clubs
+    println(process(Pip("Spades", 2)))      // 2 of Spades
+    println(process(Pip("Hearts", 6)))      // 6 of Hearts
 }
+

@@ -11,22 +11,47 @@ import java.lang.RuntimeException
  * 클래스를 만들 때 개발자가 지정한 클래스에만 상속할 수 있도록 하는 클래스
  */
 
-//sealed class Card(val suit: String)
+sealed class Card(val suit: String)
+
+class Ace(suit: String) : Card(suit)
+class King(suit: String) : Card(suit) {
+    override fun toString() = "King of $suit"
+}
+class Queen(suit: String) : Card(suit) {
+    override fun toString() = "Queen of $suit"
+}
+class Jack(suit: String) : Card(suit) {
+    override fun toString() = "Jack of $suit"
+}
+class Pip(suit: String, val number: Int) : Card(suit) {
+    init {
+        if (number < 2 || number > 10) {
+            throw RuntimeException("error")
+        }
+    }
+}
+
+
+
 //
-//class Ace(suit: String) : Card(suit)
-//class King(suit: String) : Card(suit) {
-//    override fun toString() = "King of $suit"
-//}
-//class Queen(suit: String) : Card(suit) {
-//    override fun toString() = "Queen of $suit"
-//}
-//class Jack(suit: String) : Card(suit) {
-//    override fun toString() = "Jack of $suit"
-//}
-//class Pip(suit: String, val number: Int) : Card(suit) {
-//    init {
-//        if (number < 2 || number > 10) {
-//            throw RuntimeException("error")
-//        }
-//    }
-//}
+sealed class Card(val suit: Suit)
+
+class Ace(suit: Suit) : Card(suit)
+class King(suit: Suit) : Card(suit) {
+    override fun toString() = "King of $suit"
+}
+class Queen(suit: Suit) : Card(suit) {
+    override fun toString() = "Queen of $suit"
+}
+class Jack(suit: Suit) : Card(suit) {
+    override fun toString() = "Jack of $suit"
+}
+class Pip(suit: Suit, val number: Int) : Card(suit) {
+    init {
+        if (number < 2 || number > 10) {
+            throw RuntimeException("error")
+        }
+    }
+}
+
+

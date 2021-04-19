@@ -16,7 +16,6 @@ class CSharpProgrammer2 : Worker2 {
 }
 
 //class Manager2
-
 class Manager2(val worker2: Worker2) {
     fun work() = worker2.work()
     fun takeVacation() = worker2.takeVacation()
