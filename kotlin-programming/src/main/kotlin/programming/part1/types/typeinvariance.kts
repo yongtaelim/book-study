@@ -15,7 +15,13 @@ fun receiveFruitsMutable(fruits: Array<Fruit>) {
 }
 
 val bananas: Array<Banana> = arrayOf()
-//receiveFruitsMutable(bananas) // ERROR type이 맞지않다.
+receiveFruitsMutable(bananas) // ERROR type이 맞지않다.
+
+val fruits: Array<Fruit> = arrayOf<Banana>()
+val fruits: Array<Any> = arrayOf<Banana>()
+val fruits: Array<Fruit> = arrayOf<Fruit>()
+val fruits: List<Fruit> = listOf<Banana>()
+
 
 fun receiveFruitImmutable(fruits: List<Fruit>) {
     println("Number of fruits: ${fruits.size}")

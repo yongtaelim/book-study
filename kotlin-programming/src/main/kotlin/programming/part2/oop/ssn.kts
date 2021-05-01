@@ -13,3 +13,6 @@ fun receiveSSN(ssn: SSN) {
 }
 
 receiveSSN(SSN("111-111-1111111"))
+
+
+inline fun sum(a: Int, b: Int) = a + b

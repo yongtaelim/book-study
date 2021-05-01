@@ -19,3 +19,14 @@ class CSharpProgrammer4 : Worker4 {
 class Manager4(val staff: Worker4) : Worker4 by staff {
     fun meeting() = println("org meeting with ${staff.javaClass.simpleName}")
 }
+
+val doe = Manager4(JavaProgrammer4())
+val reo = Manager4(CSharpProgrammer4())
+
+
+
+class Manager4(val staff: Worker4) : Worker4 by staff {
+    override fun takeVacation() {
+        println("of course")
+    }
+}

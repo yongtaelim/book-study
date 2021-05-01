@@ -21,3 +21,7 @@ class Car(val yearOfMake: Int, theColor: String) {
         }
     }
 }
+
+var a = Car(1, "Red")
+a.color = ""
+

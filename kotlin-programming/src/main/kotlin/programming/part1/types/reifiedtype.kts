@@ -29,5 +29,6 @@ inline fun <reified T> findFirst(books: List<Book>): T {
     return seleted[0] as T
 }
 
+
 // reified 타입 파라미터를 사용하는 함수를 주시!!
 //listOf<T>(), mutableListOf<T>(), parse<T>가 있다.
