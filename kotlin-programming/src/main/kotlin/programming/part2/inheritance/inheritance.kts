@@ -37,3 +37,8 @@ class FamilyCar(year: Int, color: String) : Car(year, color) {
             super.color = value
         }
 }
+
+val familyCar = FamilyCar(2021, "RED")
+println(familyCar.color)
+familyCar.color = "GREEN"
+println(familyCar.color)
