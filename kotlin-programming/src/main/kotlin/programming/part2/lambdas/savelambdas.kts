@@ -6,3 +6,7 @@ val checkLength4: (String) -> Boolean = { name -> name.length == 4 }
 
 // 타입을 두 군데서나 선언하네..? 이런짓은 하지 말자
 val checkLength3: (String) -> Boolean = { name: String -> name.length == 3 }
+
+val checkLength5 = fun(name: String): Boolean {return name.length == 5}
+
+names.find(fun(name: String): Boolean {return name.length == 5})

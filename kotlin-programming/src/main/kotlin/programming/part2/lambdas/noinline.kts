@@ -23,7 +23,7 @@ fun report(n: Int) {
 }
 
 fun callInvokeTwo() {
-    invokeTwo(1, { i -> report(i) }, { i -> report(i) })
+    invokeTwo2(1, { i -> report(i) }, { i -> report(i) })
 }
 
 callInvokeTwo()
@@ -53,43 +53,47 @@ inline fun invokeTwo1(
  */
 
 // 선택적인 noinline
-//inline fun invokeTwo2 (
-//    n: Int,
-//    action1: (Int) -> Unit,
-//    noinline action2: (Int) -> Unit
-//) : (Int) -> Unit {
-//    return { _: Int -> println("return...") }
-//}
+inline fun invokeTwo2 (
+    n: Int,
+    action1: (Int) -> Unit,
+    noinline action2: (Int) -> Unit
+) : (Int) -> Unit {
+    println("enter invokeTwo $n")
+    action1(n)
+    action2(n)
+    println("exit invokeTwo $n")
+    return { _: Int -> println("lambda returned from invokeTwo") }
+}
 //
 // 인라인 람다에서는 논로컬 리턴이 가능하다.
-//fun callInvokeTwo() {
-//    invokeTwo2(1,
-//        { i -> if (i == 1) { return } },
-//        { i -> if (i == 1) { return } }  // noinline이끼 때문에 return 불가
-//    )
-//}
+fun callInvokeTwo() {
+    invokeTwo2(1,
+        { i -> if (i == 1) { return } },
+        { i -> if (i == 1) { return } }  // noinline이끼 때문에 return 불가
+    )
+}
 
 /*
 크로스인라인 파라미터
 주어진 람다를 호출하는게 아니고 람다를 다른 함수로 전달하거나 콜러에게 다시 돌려준다면..?
 호출하지 않은 람다는 인라인으로 만들 수 없다.
  */
-//inline fun invokeTwo3 (
-//    n: Int,
-//    action1: (Int) -> Unit,
-//    action2: (Int) -> Unit
-//): (Int) -> Unit {
-//    println("enter invokeTwo $n")
-//    action1(n)
-//    println("exit invokeTwo $n")
-//    return { input: Int -> action2(input)}
-//}
+inline fun invokeTwo3 (
+    n: Int,
+    action1: (Int) -> Unit,
+    action2: (Int) -> Unit
+): (Int) -> Unit {
+    println("enter invokeTwo $n")
+    action1(n)
+    println("exit invokeTwo $n")
+    return { input: Int -> action2(input)}
+}
 
 /*
  invokeTwo3가 action2를 직접 호출하지 않기 때문에 return의 람다는 inline이 될 수 없다.
  <해결방법>
    - 두 번째 파라미터를 noinline으로 마크한다. 노인라인을 하면 성능상의 이득이 없고 논로컬 리턴을 사용할 권한도 없다.
-   - 두 번째 파라미터를 crossinline으로 만든다. action2 함수는 invokeTwo() gkatnrk dkslrh ghcnfehlsms qnqnsdptj dlsfkdlsdl ehlsek.
+   - 두 번째 파라미터를 crossinline으로 만든다. action2 함수는 invokeTwo() 함수가 아니고 호출되는 부분에서 인라인이 된다.
  */
 inline fun invokeTwo3(
     n: Int,

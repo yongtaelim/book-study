@@ -8,20 +8,20 @@ fun invokeWith(n: Int, action: (Int) -> Unit) {
 /*
 lambda에서는 return이 없다.
  */
-//fun caller() {
-//    (1..3).forEach { i ->
-//        invokeWith(i) {
-//            println("enter for $it")
-//
-//            if (it == 2) {
-//                return
-//            }
-//
-//            println("exit for $it")
-//        }
-//    }
-//}
-//
+fun caller() {
+    (1..3).forEach { i ->
+        invokeWith(i) {
+            println("enter for $it")
+
+            if (it == 2) {
+                return
+            }
+
+            println("exit for $it")
+        }
+    }
+}
+
 
 /*
 라벨 리턴
