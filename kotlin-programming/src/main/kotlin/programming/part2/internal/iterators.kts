@@ -17,6 +17,7 @@ val people = listOf(
 val result = people.filter { person -> person.age > 15 }
     .map { person -> person.firstName }
     .map { name -> name.toLowerCase() }
+//    .joinToString(", ")
     .reduce { names, name -> "$names, $name" }
 // reduce에 전달된 람다는 줄을 뛰어넘어가면서 연산을 진행
 
