@@ -61,3 +61,12 @@ map과 flatMap 선택방법
 - 람다가 one-to-many 함수라면 기존 콜렉션을 변경하여 콜렉션의 콜렉션으로 넣기 위해서 map()사용
 - 람다가 one-to-many 함수지만 기존 콜렉션을 변경해서 객체나 값의 변경된 콜렉션으로 넣고 싶다면 flatMap 사용
  */
+
+val personNames = people.map { person -> person.firstName }
+println(personNames)  // [AS, BW, CE, DH, EM, FH, GD, HZ, IP]
+
+val personNames2 = people.map { person -> listOf(person.firstName, "temp${person.firstName}") }
+println(personNames2)  // [[AS, tempAS], [BW, tempBW], [CE, tempCE], [DH, tempDH], [EM, tempEM], [FH, tempFH], [GD, tempGD], [HZ, tempHZ], [IP, tempIP]]
+
+val personNames3 = people.flatMap { person -> listOf(person.firstName, "temp${person.firstName}") }
+println(personNames3)  // [AS, tempAS, BW, tempBW, CE, tempCE, DH, tempDH, EM, tempEM, FH, tempFH, GD, tempGD, HZ, tempHZ, IP, tempIP]

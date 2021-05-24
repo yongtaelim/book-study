@@ -18,8 +18,26 @@ val namesSortedByAge = people.filter { person -> person.age > 15 }
     .sortedBy { person -> person.age }
 //    .sortedByDescending { person -> person.age }
     .map { person -> person.firstName }
+println(namesSortedByAge)
 
 // Group
 val groupBy1stLetter = people.groupBy { person -> person.firstName.first() }
 println(groupBy1stLetter)
 
+val people2 = listOf(
+    Person("AS", 10),
+    Person("BW", 11),
+    Person("AE", 12),
+    Person("DH", 13),
+    Person("AM", 14),
+    Person("BH", 15),
+    Person("AD", 16),
+    Person("BZ", 17),
+    Person("DP", 18),
+)
+
+val namesBy1stLetter = people2.groupBy({ person -> person.firstName.first() }) {
+    person -> person.firstName
+}
+
+println(namesBy1stLetter)
