@@ -68,4 +68,35 @@ println(nameOfFirstAdult1)
 
 // 무한 시퀀스..
 // 무슨말인지 모르겠다!
-//fun isPrive(n: Long) = n > 1 && (2 until n).none { i -> n % i == 0L }
+fun isPrive(n: Long) = n > 1 && (2 until n).none { i -> n % i == 0L }
+
+println(isPrive(2))
+println(isPrive(3))
+println(isPrive(4))
+println(isPrive(5))
+
+tailrec fun nextPrime(n: Long): Long = if (isPrive(n + 1)) n + 1 else nextPrime(n + 1)
+
+println(nextPrime(2))    // 3
+println(nextPrime(3))    // 5
+println(nextPrime(11))   // 13
+
+val primes = generateSequence(5, ::nextPrime)
+
+// 아래의 루프를 실행하면 소수 시퀀스를 무한으로 생성합니다
+//for (prime in primes) {
+//    println(prime)
+//}
+
+println(primes.take(6).toList())  // [5, 7, 11, 13, 17, 19]
+
+val primes2 = sequence {
+    var i: Long = 0
+    while (true) {
+        i++
+        if (isPrive(i))
+            yield(i)  // 값을 호출자에게 리턴하고 다음 라인의 코드를 계속 실행하는 것
+    }
+}
+
+println(primes2.drop(2).take(6).toList())  // [5, 7, 11, 13, 17, 19]
