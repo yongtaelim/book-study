@@ -2,14 +2,14 @@ data class Point(val x: Int, val y: Int)
 data class Circle(val cx: Int, val cy: Int, val radius: Int)
 
 // 확장 함수를 이용하여 메소드 인젝팅!
-//fun Circle.contains(point: Point) =
-//    (point.x - cx) * (point.y - cx) + (point.y - cy) * (point.y - cy) < radius * radius
+fun Circle.contains(point: Point) =
+    (point.x - cx) * (point.y - cx) + (point.y - cy) * (point.y - cy) < radius * radius
 //
 val circle = Circle(100, 100, 25)
 val point1 = Point(110, 110)
 val point2 = Point(10, 100)
-//println(circle.contains(point1))  // true
-//println(circle.contains(point1))  // false
+println(circle.contains(point1))  // true
+println(circle.contains(point1))  // false
 
 /*
 이런것도 되네!?

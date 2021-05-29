@@ -8,12 +8,16 @@ data class Complex(val real: Int, val imaginary: Int) {
             real * other.imaginary + imaginary * other.real
         )
 
+    operator fun aaa(other: Complex) {  // error 발생
+
+    }
+
     private fun sign() = if (imaginary < 0) "-" else "+"
     override fun toString() = "$real ${sign()} ${abs(imaginary)}i"
 }
 
-println(Complex(4, 2) * Complex(-3, 4))
-println(Complex(1, 2) * Complex(-3, 4))
+println(Complex(4, 2) * Complex(-3, 4))  // -20 + 101
+println(Complex(1, 2) * Complex(-3, 4))  // -11 - 21
 
 // 연산자 오버로딩..
 /*
