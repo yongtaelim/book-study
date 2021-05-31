@@ -44,5 +44,7 @@ println(point2 in circle)  // false
 val Circle.area: Double
     get() = kotlin.math.PI * radius * radius
 
-println("Area is ${circle.area}")
+val circle2 = Circle(100, 100, 25)
+println("Area is ${circle2.area}")
+
 
