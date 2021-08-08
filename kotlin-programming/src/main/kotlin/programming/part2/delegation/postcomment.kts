@@ -10,6 +10,19 @@ class PoliteString(private val dataSource: MutableMap<String, Any>) {
     }
 }
 
+class TestString(private var content: String) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>) =
+        content.replace("su", "**")
+
+    operator fun setValue(thisRef: Any, property: KProperty<*>, value: String) {
+        content = value
+    }
+}
+
+class TTT {
+    val text: String by TestString("su")
+}
+
 class PostComment(dataSource: MutableMap<String, Any>) {
     val title: String by dataSource
     var likes: Int by dataSource

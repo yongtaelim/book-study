@@ -8,5 +8,5 @@ fun fib(n: Int): Long = when (n) {
     else -> fib(n - 1) + fib(n - 2)
 }
 
-println(measureTimeMillis { fib(40) })
-println(measureTimeMillis { fib(45) })
+println(measureTimeMillis { fib(40) })  // 3분
+println(measureTimeMillis { fib(45) })  // 4초

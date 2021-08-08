@@ -22,3 +22,12 @@ runBlocking {
 /*
 kotlinc-jvm -classpath /Users/limyongtae/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.2.2/6ff48bdfc38a8c22e3fc37605b6a6afaed3b6dbd/kotlinx-coroutines-core-1.2.2.jar
  */
+
+/*
+starting in Thread Thread[main,5,main]
+start task1 in Thread Thread[DefaultDispatcher-worker-1,5,main]
+end task1 in Thread Thread[DefaultDispatcher-worker-1,5,main]
+ending in Thread Thread[main,5,main]
+start task2 in Thread Thread[main,5,main]
+end task2 in Thread Thread[main,5,main]
+ */

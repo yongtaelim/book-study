@@ -14,7 +14,7 @@ object Factorial {
 이 부분은 잘 이해가 안된다.. 차근 차근 살펴보자..... show kotlin byte...으로 두개 메소드의 차이점을 알아보자
 
 factorialRec()의 바이트코드에서 factorialRec()를 재귀적으로 호출하기 위해서 invokevirtual 명령어가 사용되었다.
-그 후 BigInteger에 multiply() 메소드가 호출되었다. 즉, 재귀 프뢰저가 재귀 프로세스로 컴파일 되었다는 것을 보여준다.
+그 후 BigInteger에 multiply() 메소드가 호출되었다. 즉, 재귀 프로시저가 재귀 프로세스로 컴파일 되었다는 것을 보여준다.
 
 반면에 factorial()의 바이트코드는 invokevirtual 재귀 호출이 전혀 없다. 대신 ifgt를 호출하고 goto로 함수의 다른 부분으로 점프한다.
 즉, 재귀 프로시저가 반복을 이용하는 프로세스로 컴파일 되었다는 증거다. 코틀린이 잘했단다... 무슨말인지 모르겠다..

@@ -457,7 +457,7 @@ db.analytics.find()
 { "_id" : ObjectId("606ea1c10409afa4cebe978c"), "url" : "/blog", "pageviews" : 2 }
 ```
 
-"$setOnInsert" insert할떄만 세팅
+"$setOnInsert" insert 할때만 세팅
 ```
 > db.userss.updateOne({}, {"$setOnInsert" : {"createAt" : new Date()}}, {"upsert" : true})
 {
