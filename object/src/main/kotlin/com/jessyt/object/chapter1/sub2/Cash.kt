@@ -32,22 +32,22 @@ class CashBad {
     }
 }
 
-class CashGood(
-    private var dollars: Int
-) {
-    constructor(dollars: Float) {
-        this.dollars = dollars.toInt()
-    }
-    constructor(dollars: String) {
-        this.dollars = CashBad.parse(dollars)
-    }
-
-    companion object {
-        fun parse(dollars: String): Int {
-            return 0
-        }
-    }
-}
+//class CashGood(
+//    private var dollars: Int
+//) {
+//    constructor(dollars: Float) {
+//        this.dollars = dollars.toInt()
+//    }
+//    constructor(dollars: String) {
+//        this.dollars = CashBad.parse(dollars)
+//    }
+//
+//    companion object {
+//        fun parse(dollars: String): Int {
+//            return 0
+//        }
+//    }
+//}
 
 //fun test() {
 //    Cash(30)
