@@ -14,7 +14,7 @@ import java.io.InputStream
 //}
 
 class Document {
-    fun output(): OutputPipe {}
+//    fun output(): OutputPipe {}
 }
 
 class OutputPipe {
