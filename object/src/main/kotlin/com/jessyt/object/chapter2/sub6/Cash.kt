@@ -1,13 +1,19 @@
 package com.jessyt.`object`.chapter2.sub6
 
+import java.lang.RuntimeException
+
 /**
  * Created by LYT to 2021/08/24
  */
 class Cash(
-    private var dollars: Int
+    private var dollars: Int,
+    private var cents: Int
 ) {
     fun mul(factor: Int) {
         this.dollars *= factor
+        if (cents < 0)
+            throw RuntimeException("Failed!!!")
+        this.cents *= factor
     }
 
     override fun toString(): String {
@@ -16,16 +22,24 @@ class Cash(
 }
 
 class ImmutableCash(
-    private val dollars: Int
+    private val dollars: Int,
+    private val cents: Int
 ) {
-    fun mul(factor: Int) =
-        ImmutableCash(dollars * factor)
+    fun mul(factor: Int): ImmutableCash {
+        if (cents < 0) // 잘못된 경우
+            throw RuntimeException("Failed!!!")
+
+        return ImmutableCash(
+            dollars * factor,
+            cents * factor
+        )
+    }
 }
 
 fun main() {
     val map = mutableMapOf<Cash, String>()
-    val five = Cash(5)
-    val ten = Cash(10)
+    val five = Cash(5, 0)
+    val ten = Cash(10, 0)
 
     map[five] = "five"
     map[ten] = "ten"
