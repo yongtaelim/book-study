@@ -23,14 +23,14 @@ class Times {
         println("After Price: $price")
     }
 
-    fun logic() {
-        val five = Cash(5)
-        // 수 십줄의 로직
-        print(five)
-        // 수 백줄의 로직
-
-        println(five)  // 5가 아닌 10이다.
-    }
+//    fun logic() {
+//        val five = Cash(5)
+//        // 수 십줄의 로직
+//        print(five)
+//        // 수 백줄의 로직
+//
+//        println(five)  // 5가 아닌 10이다.
+//    }
 }
 
 class Cash1(
