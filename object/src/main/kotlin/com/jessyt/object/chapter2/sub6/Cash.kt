@@ -36,10 +36,26 @@ class ImmutableCash(
     }
 }
 
+class Test(
+    private var a: String
+) {
+    fun mul(factor: Int) {
+        this.a = (a.toInt() * factor).toString()
+    }
+
+    override fun toString(): String {
+        return a
+    }
+}
+
 fun main() {
-    val map = mutableMapOf<Cash, String>()
-    val five = Cash(5, 0)
-    val ten = Cash(10, 0)
+//    val map = mutableMapOf<Cash, String>()
+//    val five = Cash(5, 0)
+//    val ten = Cash(10, 0)
+
+    val map = mutableMapOf<Test, String>()
+    val five = Test("5")
+    val ten = Test("10")
 
     map[five] = "five"
     map[ten] = "ten"
