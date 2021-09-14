@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 /**
  * Created by LYT to 2021/08/31
  */
-internal class WebPageTest {
+internal class WebPagesTest {
 
     @Test
     fun `check content`() {
