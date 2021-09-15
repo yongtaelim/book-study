@@ -100,3 +100,19 @@
 //    override fun iterator(): Iterator<String> =
 //        listOf(FileUtils.readLines(this.file)).iterator()
 //}
+
+class User {
+    lateinit var name: String
+
+    companion object {
+        private val INSTANCE = User()
+        fun getInstance() = INSTANCE
+    }
+}
+
+class Test6 {
+    fun test() {
+        val a = User.getInstance()
+        a.name = ""
+    }
+}
